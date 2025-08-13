@@ -40,6 +40,8 @@ import NoidaContact from "./pages/contacts/NoidaContact.jsx";
 import GurugramContact from "./pages/contacts/GurugramContact.jsx";
 import AustraliaContact from "./pages/contacts/AustraliaContacts.jsx";
 
+import Cart from "./pages/Cart.jsx"
+
 function App() {
   return (
     <>
@@ -119,6 +121,8 @@ function App() {
 
         {/*software and apps*/}
         <Route path="/softwareandapps" element={<SoftwareAndApps />} />
+        <Route path="/cart" element={<Cart />} />
+
       </Routes>
       <Footer />
     </>
