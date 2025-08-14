@@ -10,7 +10,7 @@ import ServicesSection from "./components/ServicesSection .jsx";
 // Digital Marketing Pages
 import DigitalMarketing from "./pages/services/DigitalMarketing/DigitalMarketing.jsx";
 import AEOServices from "./pages/services/DigitalMarketing/AEOServices.jsx";
-import SeoServices from "./pages/services/DigitalMarketing/SeoServices.jsx";
+import SeoServices from "./pages/services/DigitalMarketing/SEOservices.jsx";
 import ORMServices from "./pages/services/DigitalMarketing/ORMServices.jsx";
 import SMMServices from "./pages/services/DigitalMarketing/SMMServices.jsx";
 import SMOServices from "./pages/services/DigitalMarketing/SMOServices.jsx";
