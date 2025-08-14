@@ -39,7 +39,7 @@ export default function SoftwareAndApps() {
   }
 
   return (
-    <div className="p-6 max-w-7xl mx-auto bg-gray-50 min-h-screen">
+    <div className="p-6 max-w-7xl mx-auto bg-white min-h-screen">
       {/* Breadcrumb */}
       <p className="text-gray-500 text-sm mb-2">Home / Software & Apps</p>
 
@@ -56,7 +56,7 @@ export default function SoftwareAndApps() {
         <select
           value={sortOption}
           onChange={(e) => handleSort(e.target.value)}
-          className="border border-gray-300 px-4 py-2 rounded-lg shadow-sm bg-white focus:ring-2 focus:ring-gray-400 focus:outline-none transition"
+          className="border border-gray-300 px-4 py-2 rounded-md shadow-sm bg-white focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
         >
           <option value="default">Default sorting</option>
           <option value="popularity">Sort by popularity</option>
@@ -68,51 +68,56 @@ export default function SoftwareAndApps() {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {products.map((product) => (
           <div
             key={product._id}
-            className="border border-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 bg-white relative group"
+            className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300 relative w"
           >
+            {/* Sale badge */}
             {product.sale && (
-              <span className="absolute top-3 left-3 bg-gray-800 text-white px-3 py-1 text-xs rounded-full shadow-md">
-                Sale
+              <span className="absolute top-3 right-3 bg-green-600 text-white px-3 py-1 text-xs font-semibold rounded-full shadow-md">
+                Sale!
               </span>
             )}
 
             {/* Image */}
-            <div className="overflow-hidden h-48 flex items-center justify-center bg-gray-100">
+            <div className="h-56 bg-gray-100 overflow-hidden">
               {product.image ? (
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="h-full object-cover transform group-hover:scale-105 transition duration-500 ease-in-out"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               ) : (
-                <span className="text-gray-400">No Image</span>
+                <span className="text-gray-400 flex items-center justify-center h-full">
+                  No Image
+                </span>
               )}
             </div>
 
             {/* Details */}
-            <div className="p-5">
-              <h2 className="text-lg font-semibold mb-1 text-gray-800 group-hover:text-gray-600 transition">
+            <div className="p-4 text-center">
+              <h2 className="text-pink-700 font-medium mb-1 hover:text-pink-300 transition">
                 {product.title}
               </h2>
 
-              {product.oldPrice && (
-                <p className="text-gray-400 line-through text-sm">
-                  ₹{product.oldPrice.toLocaleString()}
-                </p>
-              )}
+              {/* Prices */}
+              <div className="mb-3">
+                {product.oldPrice && (
+                  <span className="text-gray-400 line-through text-sm mr-2">
+                    ₹{product.oldPrice.toLocaleString()}
+                  </span>
+                )}
+                <span className="text-green-700 font-bold text-lg">
+                  ₹{product.price.toLocaleString()}
+                </span>
+              </div>
 
-              <p className="text-gray-900 font-bold text-xl mb-4">
-                ₹{product.price.toLocaleString()}
-              </p>
-
-              {/* Button */}
+              {/* Add to Cart */}
               <button
                 onClick={() => addToCart(product)}
-                className="w-full bg-gray-900 text-white py-2 rounded-full shadow hover:bg-gray-700 transition-all duration-300 font-medium"
+                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-900 py-2 rounded-md font-medium transition"
               >
                 Add to cart
               </button>

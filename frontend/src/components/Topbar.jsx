@@ -6,6 +6,7 @@ import {
   Youtube,
   X,
   PhoneCall,
+  MessageCircle, // For WhatsApp icon
 } from "lucide-react";
 
 const Topbar = () => {
@@ -34,7 +35,7 @@ const Topbar = () => {
         </a>
 
         <a
-          href="https://www.instagram.com/nktech"
+          href="https://www.instagram.com/nktechipl/"
           target="_blank"
           rel="noopener noreferrer"
           className="p-1.5 rounded-full bg-white text-[#0F4C81] hover:scale-105 transition"
@@ -43,7 +44,7 @@ const Topbar = () => {
         </a>
 
         <a
-          href="https://www.youtube.com/@nktech"
+          href="https://www.youtube.com/@nktechipl"
           target="_blank"
           rel="noopener noreferrer"
           className="p-1.5 rounded-full bg-white text-[#0F4C81] hover:scale-105 transition"
@@ -52,7 +53,7 @@ const Topbar = () => {
         </a>
 
         <a
-          href="https://www.facebook.com/nktech"
+          href="https://www.facebook.com/NKTechPvtLtd"
           target="_blank"
           rel="noopener noreferrer"
           className="p-1.5 rounded-full bg-white text-[#0F4C81] hover:scale-105 transition"
@@ -61,12 +62,22 @@ const Topbar = () => {
         </a>
 
         <a
-          href="https://twitter.com/nktech"
+          href="https://x.com/NktechInfo"
           target="_blank"
           rel="noopener noreferrer"
           className="p-1.5 rounded-full bg-white text-[#0F4C81] hover:scale-105 transition"
         >
           <X size={18} />
+        </a>
+
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/918920877101"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-1.5 rounded-full bg-white text-[#0F4C81] hover:scale-105 transition"
+        >
+          <MessageCircle size={18} />
         </a>
       </div>
     </div>
