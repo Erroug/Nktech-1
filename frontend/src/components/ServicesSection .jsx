@@ -1,78 +1,169 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
-
-const services = [
-  {
-    title: "SEO Services",
-    description:
-      "Get unlimited suggestions of keywords and phrases related to your business.",
-    route: "/services/digitalmarketing/seoservices",
-  },
-  {
-    title: "ORM Services",
-    description:
-      "Online reputation management including social media reviews and Google reviews.",
-    route: "/services/digitalmarketing/ormservices",
-  },
-  {
-    title: "Social Media Marketing",
-    description:
-      "Promote your brand through Facebook page likes, post promotion, and more.",
-    route: "/services/digitalmarketing/smmservices",
-  },
-  {
-    title: "SEM Services",
-    description:
-      "Search engine marketing including Google Ads, display ads, and follow-ups.",
-    route: "/services/digitalmarketing/ppcservices",
-  },
-  {
-    title: "Social Media Services",
-    description:
-      "Post design, blog writing, and account management services tailored for engagement.",
-    route: "/services/digitalmarketing/smoservices",
-  },
-  {
-    title: "Media Buying",
-    description:
-      "Get featured on top news and blog sites to boost brand awareness and traffic.",
-    route: "/services/politicalcampaignmanagement",
-  },
-];
+import iphone from "../assets/iphone-toolbox.jpg";
+import { HiCheck } from "react-icons/hi";
+import { HiArrowCircleRight } from "react-icons/hi";
 
 const ServicesSection = () => {
-  return (
-    <section className="bg-gradient-to-b from-orange-50 to-white py-16 px-4 md:px-20">
-      <h2 className="text-4xl font-extrabold text-center text-orange-600 mb-4">
-        Our Services
-      </h2>
-      <p className="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-        We offer a wide range of marketing and development services to grow your business online.
-      </p>
+  const cards = [
+    {
+      title: "SEO Services",
+      description:
+        "SEO Services ,Get unlimited suggestions of keywords and phrases related to your business.",
+    },
+    {
+      title: "ORM Services",
+      description:
+        "Our ORM (Online reputation management) Services includes Social Media reviews management, Google reviews.",
+    },
+    {
+      title: "Social Media Marketing",
+      description:
+        "SMM (Social Media Marketing) services include Social Account promotion ie Facebook page likes, Post promotion.",
+    },
+    {
+      title: "SEM Services",
+      description:
+        "SEM (Search engine marketing) include Google Adwords, Display advertising, Follow up marketing.",
+    },
+    {
+      title: "Social Media Services",
+      description:
+        "Our social media management services include Social account management, Post writing & designing, Blog writing.",
+    },
+    {
+      title: "Media Buying",
+      description:
+        "We are associated with many Online news websites and Popular Blogs, Where we can promote our client’s Services.",
+    },
+  ];
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white border border-orange-100 rounded-2xl shadow-md hover:shadow-xl transition p-6 group hover:-translate-y-1"
-          >
-            <h3 className="text-xl font-semibold text-gray-800 group-hover:text-orange-600 transition mb-3">
-              {service.title}
-            </h3>
-            <p className="text-gray-600 mb-6 text-sm">{service.description}</p>
-            <div className="flex gap-3">
-              <Link
-                to={service.route}
-                className="bg-orange-500 text-white px-4 py-2 text-sm rounded hover:bg-orange-600 transition inline-flex items-center"
-              >
-                Learn More <FaArrowRight className="ml-2" />
-              </Link>
-            </div>
-          </div>
-        ))}
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-orange-500 relative">
+      {/* Custom animation for check button */}
+      <style>{`
+        .check-btn:hover { animation: pulseScale 800ms infinite; }
+        @keyframes pulseScale {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.18); }
+          100% { transform: scale(1); }
+        }
+      `}</style>
+
+      {/* Buttons behind the image */}
+      <div className="absolute z-0 flex mt-160 justify-between items-center w-[400px]">
+        <button className="bg-[#294A63] text-right text-white px-4 py-2  shadow-md flex items-center gap-2">
+          LEARN MORE
+          <span className="">
+            <HiArrowCircleRight className="w-5 h-5" />
+          </span>
+        </button>
+
+        <button className="bg-[#294A63] text-white px-4 py-2  shadow-md flex items-center gap-2">
+          GET A QUOTE
+          <span className="">
+            <HiArrowCircleRight className="w-5 h-5" />
+          </span>
+        </button>
       </div>
-    </section>
+
+      {/* Center Image */}
+      <div className="absolute z-10">
+        <img src={iphone} alt="Center" className=" border-4 border-white" />
+      </div>
+
+      {/* Cards container */}
+      <div className="grid grid-cols-2 mt-6 gap-x-100 gap-y-6">
+        <div className="flex flex-col text-right items-end space-y-6">
+          {cards.slice(0, 3).map((card, index) => (
+            <div key={index} className=" p-4  w-64">
+              <h3 className="text-lg text-[#294A63] font-bold mb-2">
+                {card.title}
+              </h3>
+              <p className="text-white  mb-4">{card.description}</p>
+              <button className="">
+                {/* Check icon */}
+                <style>
+                  {`
+    @keyframes zoomInOut {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    .zoom-hover:hover {
+      animation: zoomInOut 0.8s infinite;
+    }
+  `}
+                </style>
+
+                <button
+                  className="
+                           bord
+                            border-[2.5px]
+                            rounded-full
+                            bg-transparent
+                            text-[#294A63]
+                            w-10
+                            h-10
+                            flex
+                            items-center
+                            justify-center
+                            transition-transform
+                            duration-300
+                            zoom-hover
+                            hover:text-white
+                          "
+                >
+                  <HiCheck className="w-8 h-8" />
+                </button>
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-col justify-center items-start space-y-6">
+          {cards.slice(3, 6).map((card, index) => (
+            <div key={index} className=" p-4 rounded-lg  w-64">
+              <h3 className="text-lg text-[#294A63] font-bold mb-2">
+                {card.title}
+              </h3>
+              <p className="text-white mb-4">{card.description}</p>
+              <button className="">
+                <>
+                <style>
+                    {`
+    @keyframes zoomInOut {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      }
+      .zoom-hover:hover {
+        animation: zoomInOut 0.8s infinite;
+        }
+        `}
+  </style>
+ <button className="
+    border-[2.5px]
+    rounded-full
+    bg-transparent
+    text-[#294A63]
+    w-10
+    h-10
+    flex
+    items-center
+    justify-center
+    transition-transform
+    duration-300
+    zoom-hover
+    hover:text-white
+  "
+                  >
+                    <HiCheck className="w-8 h-8" />
+                  </button>
+                </>
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -9,18 +9,24 @@ import Offer from "../components/Offer.jsx";
 import  Productlist from "../pages/Products/Productlist.jsx"
 import SoftwareAndApps from "../pages/SoftwareApps.jsx"
 import Quality from '../components/Quality.jsx'
-
+import Career from "../components/Career.jsx"
+import ClientsMarquee from '../components/ClientsMarquee.jsx'
+import Consultation from "../components/Consultation.jsx"
+import PopularSearches from "../components/PopularSearch.jsx"
 const Home = () => {
   return (
     <div>
-        <HeroSection/>
+       <HeroSection/>
         <WhoAreWe/>
-         <Offer/>
+        <Offer/>
         <Quality/>
-        <ServicesSection/>
-        <ClientsCarousel/>
-        <Testimonials/>
+        <Career/>
         <AwardsAchievements/>
+        <ServicesSection/>
+        <ClientsMarquee/>
+        <Testimonials/>
+        <Consultation/>
+        <PopularSearches/>
     </div>
   )
 }

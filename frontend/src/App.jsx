@@ -124,7 +124,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
 
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

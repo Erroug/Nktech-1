@@ -8,7 +8,7 @@ import ConnectionDB from "./db/db.js"
 import Product from "./models/product.models.js"
 
 
-import sendEmailroute from "./routes/sendEmail.routes.js"
+// import sendEmailroute from "./routes/sendEmail.routes.js"
 
 
 dotenv.config()
@@ -16,10 +16,10 @@ const app=express()
 const PORT =process.env.PORT||5000
 
 ConnectionDB()
-
+ 
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin:process.env.Frontend_URL||"http://localhost:5173",
     methods: ["GET", "POST","PUT","DELETE"],
     credentials: true
 }));
@@ -27,7 +27,7 @@ app.use(cors({
 app.use(express.json());
 app.use("/api/product",productroutes)
 // app.use("/api/cart", cartroutes);
-app.use("/api/mail", sendEmailroute);
+// app.use("/api/mail", sendEmailroute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
