@@ -13,6 +13,7 @@ import Career from "../components/Career.jsx"
 import ClientsMarquee from '../components/ClientsMarquee.jsx'
 import Consultation from "../components/Consultation.jsx"
 import PopularSearches from "../components/PopularSearch.jsx"
+import Footer from "../components/Footer.jsx";
 const Home = () => {
   return (
     <div>
@@ -27,6 +28,7 @@ const Home = () => {
         <Testimonials/>
         <Consultation/>
         <PopularSearches/>
+        <Footer />
     </div>
   )
 }

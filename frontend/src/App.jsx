@@ -3,7 +3,6 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/AboutUs.jsx";
 import Services from "./pages/services/Services.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
 
 import ServicesSection from "./components/ServicesSection .jsx";
 
@@ -124,7 +123,6 @@ function App() {
         <Route path="/cart" element={<Cart />} />
 
       </Routes>
-      {/* <Footer /> */}
     </>
   );
 }

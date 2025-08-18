@@ -1,150 +1,110 @@
-import { Link } from "react-router-dom";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
-  X,
-  PhoneCall,
-  ShoppingCart,
-} from "lucide-react";
-import nktechLogo from "../assets/nktech.jpg";
-import { useState } from "react";
+import { FaPhoneAlt, FaMapMarkerAlt, FaChevronRight } from "react-icons/fa";
+import logo from "../assets/nktech-logo.jpg";
 
-export default function Navbar() {
-  const navLinks = [
-    { label: "Home", to: "/" },
-    { label: "About us", to: "/about" },
-    { label: "Portfolio", to: "/portfolio" },
-  ];
-
-  const servicesDropdown = [
-    { label: "Website Development", to: "/services/web" },
-    { label: "Digital Marketing", to: "/services/digital" },
-    { label: "SEO Services", to: "/services/seo" },
-  ];
-
-  const softwareDropdown = [
-    { label: "Web Apps", to: "/software/web" },
-    { label: "Mobile Apps", to: "/software/mobile" },
-    { label: "Custom Software", to: "/software/custom" },
-  ];
-
-  const contactDropdown = [
-    { label: "Noida", to: "/contact/noida" },
-    { label: "Gurugram", to: "/contact/gurugram" },
-    { label: "Australia", to: "/contact/australia" },
-  ];
-
-  const dropdownWrapper = `absolute left-0 mt-2 bg-white shadow-lg w-56 rounded-md z-50 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition duration-200`;
-
-  const dropdownItem = `px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#fbae57] transition block`;
-
+export default function Footer() {
   return (
-    <>
-      {/* Top Header */}
-      <div className="bg-[#093256] h-16 text-white text-sm py-9 px-4 flex justify-between items-center">
-        <div className="flex items-center gap-5">
-          <PhoneCall size={18} className="ml-50" />
-          <span>+91 8920 8771 01</span>
+    <footer className="bg-[#2B2F32] text-white py-10">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        {/* Left - Logo & SEO text */}
+        <div>
+          <img src={logo} alt="NK Tech" className="w-28 mb-4" />
+          <ul className="space-y-1 text-sm">
+            {[
+              "Best SEO Company in Noida",
+              "Best SEO agency in Noida",
+              "SEO company in Noida",
+              "Digital Marketing company in Noida",
+            ].map((item, i) => (
+              <li key={i} className="text-gray-300">
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="flex gap-5 text-lg">
-          {[Linkedin, Instagram, Youtube, Facebook, X].map((Icon, i) => (
-            <a
-              key={i}
-              href="#"
-              className="p-1.5 rounded-full bg-white text-[#0F4C81] hover:scale-105 transition"
-            >
-              <Icon size={18} />
-            </a>
-          ))}
+
+        {/* Services */}
+        <div>
+          <h3 className="text-xl font-bold text-orange-500 mb-3">Services</h3>
+          <ul className="space-y-2 text-sm">
+            {[
+              "SEO Services",
+              "ORM Services",
+              "Website Designing",
+              "Website Maintenance",
+              "SMO Services",
+              "SMM Services",
+            ].map((service, i) => (
+              <li
+                key={i}
+                className="flex items-center gap-2 border-b border-gray-600 pb-2 hover:text-orange-400 transition-colors cursor-pointer"
+              >
+                <FaChevronRight className="text-orange-500" /> {service}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Useful Links */}
+        <div>
+          <h3 className="text-xl font-bold text-orange-500 mb-3">Useful Links</h3>
+          <ul className="space-y-2 text-sm">
+            {[
+              "Free Consultation",
+              "Customer Support",
+              "Terms and Conditions",
+              "Privacy Policy",
+            ].map((link, i) => (
+              <li
+                key={i}
+                className="flex items-center gap-2 border-b border-gray-600 pb-2 hover:text-orange-400 transition-colors cursor-pointer"
+              >
+                <FaChevronRight className="text-orange-500" /> {link}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h3 className="text-xl font-bold text-orange-500 mb-3">Contact</h3>
+          <ul className="space-y-2 text-sm">
+            {[
+              { icon: <FaPhoneAlt className="text-orange-500" />, text: "+91 892 087 7101" },
+              { icon: <FaPhoneAlt className="text-orange-500" />, text: "+91 981 106 6609" },
+              { icon: <FaMapMarkerAlt className="text-orange-500" />, text: "Noida, India" },
+              { icon: <FaMapMarkerAlt className="text-orange-500" />, text: "Gurgaon, India" },
+              { icon: <FaMapMarkerAlt className="text-orange-500" />, text: "Melbourne, Australia" },
+              { icon: <FaMapMarkerAlt className="text-orange-500" />, text: "New Jersey, USA" },
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="flex items-center gap-2 border-b border-gray-600 pb-2 hover:text-orange-400 transition-colors cursor-pointer"
+              >
+                {item.icon} {item.text}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
-      {/* Navbar */}
-      <nav className="bg-white shadow-md z-50">
-        <div className="max-w-7xl mx-auto px-30 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/">
-            <img src={nktechLogo} alt="NK Tech Logo" className="h-18 w-auto " />
-          </Link>
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm">
+  <div className="flex flex-wrap justify-center items-center gap-4">
+    <p className="mr-18">
+      NkTech © 2012-{new Date().getFullYear()} All rights reserved. Terms of Use and Privacy Policy
+    </p>
+    {["CRM Clients", "CRM Employees", "Career", "Internship", "Blogs", "Refer & Earn"].map((item, i) => (
+      <span
+        key={i}
+        className="cursor-pointer hover:text-orange-400 transition-colors"
+      >
+        {item}
+      </span>
+    ))}
+  </div>
+</div>
 
-          {/* Nav Items */}
-          <ul className="flex gap-10 text-gray-700 text-medium font-medium relative items-center l">
-            {navLinks.map((link, i) => (
-              <li key={i}>
-                <Link
-                  to={link.to}
-                  className="relative text-gray-700 font-medium hover:text-[red] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2.5px] hover:after:bg-red-600 hover:after:transition-al hover:before:content-[''] hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:w-full hover:before:h-[2px] hover:before:bg-red-600 hover:before:transition-all"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-
-            {/* Services Dropdown */}
-            <li className="relative group cursor-pointer">
-              <span className="relative text-gray-700 font-medium hover:text-[red] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2.5px] hover:after:bg-red-600 hover:after:transition-al hover:before:content-[''] hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:w-full hover:before:h-[2px] hover:before:bg-red-600 hover:before:transition-all">
-                Services 
-              </span>
-              <ul className={dropdownWrapper}>
-                {servicesDropdown.map((item, i) => (
-                  <li key={i}>
-                    <Link to={item.to} className={dropdownItem}>
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-
-            {/* Software Dropdown */}
-            <li className="relative group cursor-pointer">
-              <span className="relative text-gray-700 font-medium hover:text-[red] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2.5px] hover:after:bg-red-600 hover:after:transition-al hover:before:content-[''] hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:w-full hover:before:h-[2px] hover:before:bg-red-600 hover:before:transition-all">
-                Software & Apps 
-              </span>
-              {/* <ul className={dropdownWrapper}>
-                {softwareDropdown.map((item, i) => (
-                  <li key={i}>
-                    <Link to={item.to} className={dropdownItem}>
-                      {item.label} */}
-                    {/* </Link> */}
-                  {/* </li> */}
-                {/* ))} */}
-              {/* </ul> */}
-            </li>
-
-            {/* Contact Dropdown */}
-            <li className="relative group cursor-pointer">
-              <span className="relative text-gray-700 font-medium hover:text-[red] hover:after:absolute hover:after:left-0 hover:after:bottom-0 hover:after:w-full hover:after:h-[2.5px] hover:after:bg-red-600 hover:after:transition-al hover:before:content-[''] hover:before:absolute hover:before:top-0 hover:before:left-0 hover:before:w-full hover:before:h-[2px] hover:before:bg-red-600 hover:before:transition-all">
-                Contact Us 
-              </span>
-              <ul className={dropdownWrapper}>
-                {contactDropdown.map((item, i) => (
-                  <li key={i}>
-                    <Link
-                      to={item.to}
-                      className={`${dropdownItem} ${
-                        item.label === "Australia" ? "text--600" : ""
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-
-            {/* Cart */}
-            <li>
-              <ShoppingCart
-                size={22}
-                className="cursor-pointer hover:text-[#fbae57] transition"
-              />
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </>
+    </footer>
   );
 }

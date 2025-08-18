@@ -35,7 +35,7 @@ const LogoScroller = ({ items, reverse }) => (
   <div className="overflow-hidden w-full">
     <div
       className={`flex gap-3 sm:gap-6 md:gap-8 min-w-max ${
-        reverse ? "animate-scrollReverse" : "animate-scroll"
+        reverse ? "scroll-reverse" : "scroll"
       }`}
     >
       {[...items, ...items].map((logo, idx) => (

@@ -1,85 +1,93 @@
 import React from 'react';
-import { FaCode, FaLaptopCode, FaLock, FaRocket, FaBullhorn, FaPaintBrush } from 'react-icons/fa';
-
-const services = [
-  { icon: <FaLaptopCode />, title: 'Custom Web Development', desc: 'Modern MERN stack and WordPress-based websites and applications.' },
-  { icon: <FaCode />, title: 'API Development', desc: 'Powerful backend RESTful & GraphQL APIs for seamless integration.' },
-  { icon: <FaPaintBrush />, title: 'UI/UX Design', desc: 'User-centric designs that engage and convert.' },
-  { icon: <FaBullhorn />, title: 'SEO & Optimization', desc: 'Boost your website’s visibility, speed & search engine ranking.' },
-  { icon: <FaLock />, title: 'Secure Solutions', desc: 'Enterprise-grade security and maintenance support.' },
-  { icon: <FaRocket />, title: 'Scalable Systems', desc: 'We build digital products that grow with your business.' },
-];
+import { motion } from "framer-motion";
+import aboutImg from "../assets/about/content_img1_grey.jpg";
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-50 min-h-screen text-gray-800">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-700 to-purple-700 text-white py-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">About NKTech</h1>
-        <p className="text-lg md:text-xl max-w-3xl mx-auto">Empowering businesses with secure, scalable, and modern digital solutions</p>
-      </section>
+    <section className="flex items-center gap-8 px-50 py-20">
+      {/* Left side - Image */}
+      
+       <motion.div
+        className="flex-shrink-0 w-130 h-130"
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
+        <img
+          src={aboutImg}
+          alt="About Us"
+          className="w-full h-auto rounded-lg shadow-lg"
+        />
+      </motion.div>
 
-      {/* Intro Section */}
-      <section className="max-w-6xl mx-auto py-12 px-6">
-        <h2 className="text-3xl font-semibold mb-4 text-center">Who We Are</h2>
-        <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-          NK Technologies ITSol Pvt. Ltd. is a Noida-based IT company delivering high-quality web development, software, and digital solutions. 
-          With expertise in MERN, WordPress, and API systems, we bring your digital vision to life — securely and reliably.
+      {/* Right side - Text */}
+      <motion.div
+        className="w-1/2 pb-35"
+        initial={{ x: 200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+      >
+        <h2 className="text-5xl font-semibold mb-4 text-[#294A63]">ABOUT US</h2>
+          <p className="text-gray-700 leading-relaxed text-justify">
+          NKTech is one of the Best SEO Company in Noida and also Best Digital
+          Marketing Company in Noida, India. We are also a well-known SEO
+          company in Ghaziabad. Website Designing Company in Ghaziabad, Noida,
+          and Delhi, India. We began our operations as Digital Marketing Agency
+          in the year 2012 and since then have grown by leaps and bounds. From
+          the very beginning, we have stayed true to our core beliefs and have
+          delivered an exceptional experience for our customers. We have more
+          than 500 satisfied customers over the globe and delivered more than
+          1000 projects in the last 12 years. Our expertise in Digital marketing
+          services includes SEO, PPC, SMO, and content writing. We have made
+          websites and done SEO for Hotels, Hospitals, FMCG companies, Doctors,
+          Clinics, Schools, and Colleges.
         </p>
-      </section>
-
-      {/* Mission and Values */}
-      <section className="bg-white py-12 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-semibold mb-4">Our Mission</h3>
-            <p className="text-gray-700 text-lg">
-              To deliver innovative, secure, and scalable solutions that help businesses thrive in the digital era — with a strong commitment to excellence, speed, and trust.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold mb-4">Core Values</h3>
-            <ul className="list-disc list-inside text-gray-700 text-lg">
-              <li>Security First Development</li>
-              <li>Client-Centric Communication</li>
-              <li>Result-Oriented Innovation</li>
-              <li>Transparency and Trust</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-12 px-6 bg-gray-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-3xl font-semibold mb-10">What We Do</h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300"
-              >
-                <div className="text-blue-600 text-4xl mb-4 flex justify-center">{service.icon}</div>
-                <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
-                <p className="text-gray-600">{service.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Location + Contact */}
-      <section className="py-12 px-6 text-center">
-        <h3 className="text-2xl font-semibold mb-4">Where We’re Located</h3>
-        <p className="text-lg text-gray-700 mb-4">
-          307B, A40, ITHUM Tower A, Sector 62, Noida, Uttar Pradesh 201301
+      </motion.div>
+      
+      <p className="absolute left-50 text-justify pr-50 top-170 text-gray-600  ">
+          We began our operations as Website Development and Digital Marketing Agency in 
+          the year 2010 and since then have grown by leaps and bounds. From the very beginning 
+          we have stayed true to our core beliefs and have delivered an exceptional experience 
+          for our customers. We have more than 550 satisfied customers over the globe and delivered 
+          more than 1000 projects in the last 12 years. Our expertise in Software Development,
+           Website Designing & Development, Digital marketing services which includes SEO, PPC,
+            SMO and content writing. We have developed websites and done SEO for Colleges, Universities, 
+          Hotels, Hospitals, FMCG companies, Doctors, Clinics, and multiple product based companies.
         </p>
-        <p className="text-lg text-gray-700">
-          📧 <a href="mailto:info@nktech.in" className="text-blue-600 underline">info@nktech.in</a>
-        </p>
-      </section>
-    </div>
-  );
+
+        <h3 className="absolute text-justify pr-50 top-205">Our Big Step :</h3>
+        <p className="absolute text-justify pr-50 top-215">We have made a local ecosystem portal for 
+          cities where one can find local businesses, Jobs, News, Events, citizens and many more for
+           that specific city. We made it in the shape of a city portal and currently live in 30 cities 
+           and we are planning to come to 500 cities in the next few years.</p>
+           <h3 className="absolute text-justify pr-50 top-230">Vision</h3>
+           <p className="absolute text-justify pr-50 top-240">Our Vision is to expand globally and provide the best IT Services all over the globe through
+             local. To provide optimal IT solutions and consulting thinking according to the customers needs
+              and capabilities.</p>
+            <h3 className="absolute text-justify pr-50 top-255">Mission</h3>
+            <p className="absolute text-justify pr-50 top-265">Dedicated to bringing innovation and creating value for customers
+               by developing products and services of technological excellence.</p>
+
+           <h3 className="absolute  text-justify text-5xl font-bold underline pr-50 top-300 text-[#294A63]">AWARDS AND ACHIEVEMENTS:</h3>
+          {/* <div> 
+
+           <p className="absolute text-justify  top-265">
+            Best Digital Marketing Company in Delhi NCR of the Year 2015.
+            Best Digital Marketing Company in Western UP of the Year 2016.
+            Best Digital Marketing Company in Delhi NCR of the Year 2016</p>
+          </div> */}
+
+          {/* <div>
+             <h3 className="absolute text-justify text-small font-bold underline pr-50 top-300 text-[#294A63]">SHORTLISTED IN:</h3>
+          <p className="absolute text-justify  top-265">
+            Best Digital Marketing Company in Delhi NCR of the Year 2015.
+            Best Digital Marketing Company in Western UP of the Year 2016.
+            Best Digital Marketing Company in Delhi NCR of the Year 2016</p> */}
+          {/* </div> */}
+           
+
+    </section>
+  ); 
 };
 
 export default AboutUs;
