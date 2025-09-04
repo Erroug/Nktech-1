@@ -16,8 +16,14 @@ import PopularSearches from "../components/PopularSearch.jsx"
 import Footer from "../components/Footer.jsx";
 const Home = () => {
   return (
-    <div>
+    <>  
+    <header>
+
        <HeroSection/>
+    </header>
+
+    <outlet>
+      
         <WhoAreWe/>
         <Offer/>
         <Quality/>
@@ -28,8 +34,10 @@ const Home = () => {
         <Testimonials/>
         <Consultation/>
         <PopularSearches/>
+
+    </outlet>
         <Footer />
-    </div>
+    </>
   )
 }
 
