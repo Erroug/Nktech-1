@@ -1,7 +1,7 @@
-import awardImg from "../assets/Govt-Projects.png"; // update path if needed
-import WinnerImg from "../assets/Winner.png";
-import RankImg from "../assets/Rank.png";
-import GoogleImg from "../assets/Google-Certified.png";
+import awardImg from "../assets/govt-projects.png"; // update path if needed
+import WinnerImg from "../assets/winner.png";
+import RankImg from "../assets/rank.png";
+import GoogleImg from "../assets/google-certified.png";
 import iphoneImg from "../assets/iphone-toolbox.jpg";
 const Card = ({ title, description, imgSrc, width, height }) => (
   <div className="w-75 p-1 bg-[#1f3b4d] text-white rounded-lg shadow-lg overflow-hidden">
