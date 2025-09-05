@@ -1,5 +1,5 @@
 import React from "react";
-import iphone from "../assets/iphone-toolbox.jpg";
+const iphone = "/assets/iphone-toolbox.jpg";
 import { HiCheck, HiArrowCircleRight } from "react-icons/hi";
 
 const ServicesSection = () => {

@@ -1,8 +1,10 @@
-import awardImg from "../assets/govt-projects.png"; // update path if needed
-import WinnerImg from "../assets/winner.png";
-import RankImg from "../assets/rank.png";
-import GoogleImg from "../assets/google-certified.png";
-import iphoneImg from "../assets/iphone-toolbox.jpg";
+// Use images from public/assets so they resolve in production on Vercel
+const awardImg = "/assets/govt-projects.png";
+const WinnerImg = "/assets/winner.png";
+const RankImg = "/assets/rank.png";
+const GoogleImg = "/assets/google-certified.png";
+const iphoneImg = "/assets/iphone-toolbox.jpg";
+
 const Card = ({ title, description, imgSrc, width, height }) => (
   <div className="w-75 p-1 bg-[#1f3b4d] text-white rounded-lg shadow-lg overflow-hidden">
     <img

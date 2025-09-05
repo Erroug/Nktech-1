@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { menuItems } from "../data/menuItem.js";
 import MenuItems from "./MenuItems.jsx";
 import { ShoppingCart, Menu, X } from "lucide-react";
-import nktechLogo from "../assets/nktech.jpg";
+const nktechLogo = "/assets/nktech.jpg";
 import Topbar from "./Topbar.jsx";
 import { CartContext } from "../context/CartContext.jsx";
 
@@ -14,18 +14,12 @@ export default function Navbar() {
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <>
+    <header className="shadow-sm sticky top-0 z-50 bg-white">
       <Topbar />
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img
-              src={nktechLogo}
-              alt="NK Tech Logo"
-              className="h-10 w-auto md:h-12"
-            />
-          </Link>
+      <nav className="container mx-auto flex items-center justify-between py-3 px-4">
+        <Link to="/" className="flex items-center gap-2">
+          <img src={nktechLogo} alt="NKTech" className="h-10 w-auto" />
+        </Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex gap-6 text-gray-700 text-sm font-medium items-center">
@@ -55,7 +49,7 @@ export default function Navbar() {
           >
             {mobileOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
-        </div>
+        </nav>
 
         {/* Mobile Dropdown Menu */}
         <div
@@ -92,7 +86,6 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-      </nav>
-    </>
+    </header>
   );
 }

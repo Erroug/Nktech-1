@@ -1,5 +1,5 @@
 import { FaPhoneAlt, FaMapMarkerAlt, FaChevronRight } from "react-icons/fa";
-import logo from "../assets/nktech-logo.jpg";
+const logo = "/assets/nktech-logo.jpg";
 
 export default function Footer() {
   return (
@@ -8,7 +8,10 @@ export default function Footer() {
         
         {/* Left - Logo & SEO text */}
         <div>
-          <img src={logo} alt="NK Tech" className="w-28 mb-4" />
+          <img src={logo} alt="NKTech" className="h-10 w-auto mb-4" />
+          <p className="text-sm text-gray-300">
+            We build modern web experiences and deliver measurable growth.
+          </p>
           <ul className="space-y-1 text-sm">
             {[
               "Best SEO Company in Noida",
