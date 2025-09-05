@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import seo from "../assets/slider_full1.jpg"
-import marketing from "../assets/slider_full2.jpg"
-import brilliantsmart from "../assets/slider_full3.jpg"
+import seo from "../assets/slider_full1.jpg";
+import marketing from "../assets/slider_full2.jpg";
+import brilliantsmart from "../assets/slider_full3.jpg";
 
 
 

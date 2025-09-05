@@ -1,5 +1,5 @@
 import React from "react";
-import backGround from '../assets/nktech-Consultation.jpg'; 
+import backGround from '../assets/nktech-consultation.jpg'; 
 
 const ConsultationSection = () => {
   return (

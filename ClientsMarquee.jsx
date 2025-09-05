@@ -1,12 +1,12 @@
 // ClientsMarquee.jsx
 import React from "react";
-import drSweta from "../assets/dr-sweta-gupta.png"
-import fyra from "../assets/fyra.png"
-import mulBerry from "../assets/mulberry.png"
-import hawaHawai from "../assets/hawa-hawai.png"
-import medicarthIndia from "../assets/medicarthindia.webp"
-import realtyNerve from "../assets/realty-nerve.webp"
-import patentDraw from "../assets/patentdraw.webp"
+import drSweta from "../assets/dr-sweta-gupta.png";
+import fyra from "../assets/fyra.png";
+import mulBerry from "../assets/mulberry.png";
+import hawaHawai from "../assets/hawa-hawai.png";
+import medicarthIndia from "../assets/medicarthindia.webp";
+import realtyNerve from "../assets/realty-nerve.webp";
+import patentDraw from "../assets/patentdraw.webp";
 
 const logos = [
   drSweta,
@@ -16,9 +16,6 @@ const logos = [
   medicarthIndia,
   realtyNerve,
   patentDraw,
-  "https://via.placeholder.com/150x80?text=Logo+8",
-  "https://via.placeholder.com/150x80?text=Logo+9",
-  "https://via.placeholder.com/150x80?text=Logo+10",
 ];
 
 
