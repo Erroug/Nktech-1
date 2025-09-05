@@ -1,4 +1,4 @@
-import awardImg from "../assets/govt-projects.png";
+import awardImg from "../assets/govt-projects.png"; // update path if needed
 import WinnerImg from "../assets/winner.png";
 import RankImg from "../assets/rank.png";
 import GoogleImg from "../assets/google-certified.png";
