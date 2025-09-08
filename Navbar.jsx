@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { menuItems } from "../data/menuItem.js";
 import MenuItems from "./MenuItems.jsx";
 import { ShoppingCart, Menu, X } from "lucide-react";
-const nktechLogo = "/assets/nktech.jpg";
+const nktechLogo = "/assets/Bizwoke.jpg";
 import Topbar from "./Topbar.jsx";
 import { CartContext } from "../context/CartContext.jsx";
 

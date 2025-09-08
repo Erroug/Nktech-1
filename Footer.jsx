@@ -1,5 +1,5 @@
 import { FaPhoneAlt, FaMapMarkerAlt, FaChevronRight } from "react-icons/fa";
-const logo = "/assets/nktech-logo.jpg";
+import logo from "/assets/Bizwoke.jpg";
 
 export default function Footer() {
   return (
@@ -8,10 +8,7 @@ export default function Footer() {
         
         {/* Left - Logo & SEO text */}
         <div>
-          <img src={logo} alt="NKTech" className="h-10 w-auto mb-4" />
-          <p className="text-sm text-gray-300">
-            We build modern web experiences and deliver measurable growth.
-          </p>
+          <img src={logo} alt="Bizwoke" className="w-50 h-25 mb-4" />
           <ul className="space-y-1 text-sm">
             {[
               "Best SEO Company in Noida",
@@ -73,8 +70,8 @@ export default function Footer() {
           <h3 className="text-xl font-bold text-orange-500 mb-3">Contact</h3>
           <ul className="space-y-2 text-sm">
             {[
-              { icon: <FaPhoneAlt className="text-orange-500" />, text: "+91 892 087 7101" },
-              { icon: <FaPhoneAlt className="text-orange-500" />, text: "+91 981 106 6609" },
+              { icon: <FaPhoneAlt className="text-orange-500" />, text: "+91 7836055511" },
+              { icon: <FaPhoneAlt className="text-orange-500" />, text: "+91 7836055511" },
               { icon: <FaMapMarkerAlt className="text-orange-500" />, text: "Noida, India" },
               { icon: <FaMapMarkerAlt className="text-orange-500" />, text: "Gurgaon, India" },
               { icon: <FaMapMarkerAlt className="text-orange-500" />, text: "Melbourne, Australia" },
@@ -95,7 +92,7 @@ export default function Footer() {
       <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm">
   <div className="flex flex-wrap justify-center items-center gap-4">
     <p className="mr-18">
-      NkTech © 2012-{new Date().getFullYear()} All rights reserved. Terms of Use and Privacy Policy
+      Bizwoke © 2012-{new Date().getFullYear()} All rights reserved. Terms of Use and Privacy Policy
     </p>
     {["CRM Clients", "CRM Employees", "Career", "Internship", "Blogs", "Refer & Earn"].map((item, i) => (
       <span

@@ -16,10 +16,10 @@ const Topbar = () => {
       <div className="flex items-center gap-2">
         <PhoneCall size={18} />
         <a 
-          href="tel:+918920877101" 
+          href="tel:+91 7836055511" 
           className="hover:underline"
         >
-          +91 8920 8771 01
+          +91 7836055511
         </a>
       </div>
 
