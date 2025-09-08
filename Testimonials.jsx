@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import RajivKhanna from "/assets/rajivkhana.jpg";
-import yajushkhanna from "/assets/yajush-khanna-1.jpg";
-import noprofile from "/assets/noprofile-06.svg";
+const RajivKhanna = "/assets/rajivkhana.jpg";
+const yajushkhanna = "/assets/yajush-khanna-1.jpg";
+const noprofile = "/assets/noprofile-06.svg";
 import { FaStar } from "react-icons/fa";
 
 const Testimonials = () => {
