@@ -1,90 +1,105 @@
 import React from "react";
-const iphone = "/assets/iphone-toolbox.jpg";
-import { HiCheck, HiArrowCircleRight } from "react-icons/hi";
+import { HiCheck } from "react-icons/hi";
 
-const ServicesSection = () => {
-  const cards = [
-    { title: "SEO Services", description: "SEO Services ,Get unlimited suggestions of keywords and phrases related to your business." },
-    { title: "ORM Services", description: "Our ORM (Online reputation management) Services includes Social Media reviews management, Google reviews." },
-    { title: "Social Media Marketing", description: "SMM (Social Media Marketing) services include Social Account promotion ie Facebook page likes, Post promotion." },
-    { title: "SEM Services", description: "SEM (Search engine marketing) include Google Adwords, Display advertising, Follow up marketing." },
-    { title: "Social Media Services", description: "Our social media management services include Social account management, Post writing & designing, Blog writing." },
-    { title: "Media Buying", description: "We are associated with many Online news websites and Popular Blogs, Where we can promote our client’s Services." },
+export default function ServicesShowcase() {
+  const servicesLeft = [
+    {
+      title: "SEO Services",
+      desc: "SEO Services, Get unlimited suggestions of keywords and phrases related to your business.",
+    },
+    {
+      title: "ORM Services",
+      desc: "Our ORM (Online reputation management) services include Social Media reviews management, Google reviews.",
+    },
+    {
+      title: "Social Media Marketing",
+      desc: "SMM (Social Media Marketing) services include Social Account promotion i.e. Facebook page likes, Post promotion.",
+    },
+  ];
+
+  const servicesRight = [
+    {
+      title: "SEM Services",
+      desc: "SEM (Search engine marketing) includes Google Adwords, Display advertising, Follow up marketing.",
+    },
+    {
+      title: "Social Media Services",
+      desc: "Our social media management services include Social account management, Post writing & designing, Blog writing.",
+    },
+    {
+      title: "Media Buying",
+      desc: "We are associated with many online news websites and popular blogs, where we can promote our client’s services.",
+    },
   ];
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-orange-500 px-4 sm:px-8 py-12">
+    <section className="bg-orange-500 text-gray-900 py-20 sm:py-28 px-2 sm:px-6 min-h-[500px] sm:min-h-[600px] flex items-center relative">
+      {/* Hover Animation Style */}
       <style>{`
-        .zoom-hover:hover { animation: zoomInOut 0.8s infinite; }
+        .zoom-hover:hover { 
+          animation: zoomInOut 0.8s infinite; 
+        }
         @keyframes zoomInOut {
           0%, 100% { transform: scale(1); }
           50% { transform: scale(1.1); }
         }
       `}</style>
 
-      {/* Content wrapper */}
-      <div className="relative flex flex-col items-center">
-        {/* Top grid: cards + phone */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
-          
-          {/* Left cards */}
-          <div className="flex flex-col text-right items-end space-y-6 order-2 md:order-1">
-            {cards.slice(0, 3).map((card, index) => (
-              <div key={index} className="p-4 w-full sm:w-64">
-                <h3 className="text-lg text-[#294A63] font-bold mb-2">{card.title}</h3>
-                <p className="text-white mb-4 text-sm sm:text-base">{card.description}</p>
-                <button
-                  className="border-[2.5px] rounded-full bg-transparent text-[#294A63] w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center transition-transform duration-300 zoom-hover hover:text-white"
-                >
-                  <HiCheck className="w-7 h-7 sm:w-8 sm:h-8" />
-                </button>
-              </div>
-            ))}
-          </div>
+      {/* Force 3-column layout always */}
+      <div className="max-w-7xl mx-auto grid grid-cols-3 items-stretch gap-8 sm:gap-12 w-full">
+        {/* Left Services */}
+        <div className="space-y-10 text-right flex flex-col justify-center">
+          {servicesLeft.map((service, i) => (
+            <div key={i} className="p-2 sm:p-4">
+              <h3 className="text-base sm:text-lg md:text-2xl lg:text-2xl font-bold text-[#294A63] flex items-center justify-end gap-3">
+                {service.title}
+                <span className="border-[2.5px] rounded-full text-[#294A63] w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center transition-transform duration-300 hover:text-white zoom-hover">
+                  <HiCheck className="w-5 h-5 sm:w-6 sm:h-6" />
+                </span>
+              </h3>
+              <p className="mt-4 sm:mt-5 text-white text-sm sm:text-base max-w-[220px] sm:max-w-xs ml-auto">
+                {service.desc}
+              </p>
+            </div>
+          ))}
+        </div>
 
-          {/* Center phone */}
-          <div className="flex justify-center order-1 md:order-2">
-            <img
-              src={iphone}
-              alt="Center"
-              className="border-4 border-white w-44 sm:w-56 md:w-72 lg:w-80"
-            />
-          </div>
+        {/* Middle Image + Buttons */}
+        <div className="relative flex items-center justify-center">
+          <img
+            src="/assets/iphone-toolbox.jpg"
+            alt="ToolsBox"
+            className="w-28 sm:w-44 md:w-56 lg:w-64 border-4 border-white rounded-lg shadow-lg"
+          />
 
-          {/* Right cards */}
-          <div className="flex flex-col items-start space-y-6 order-3">
-            {cards.slice(3, 6).map((card, index) => (
-              <div key={index} className="p-4 w-full sm:w-64">
-                <h3 className="text-lg text-[#294A63] font-bold mb-2">{card.title}</h3>
-                <p className="text-white mb-4 text-sm sm:text-base">{card.description}</p>
-                <button
-                  className="border-[2.5px] rounded-full bg-transparent text-[#294A63] w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center transition-transform duration-300 zoom-hover hover:text-white"
-                >
-                  <HiCheck className="w-7 h-7 sm:w-8 sm:h-8" />
-                </button>
-              </div>
-            ))}
+          {/* Buttons */}
+          <div className="absolute bottom-[-40px] sm:bottom-[-80px] flex flex-col sm:flex-row justify-center gap-5 sm:gap-6">
+            <button className="bg-blue-900 text-white px-5 sm:px-7 py-3 sm:py-4 rounded-md font-medium hover:bg-blue-800 transition text-sm sm:text-base">
+              LEARN MORE ➜
+            </button>
+            <button className="bg-blue-900 text-white px-5 sm:px-7 py-3 sm:py-4 rounded-md font-medium hover:bg-blue-800 transition text-sm sm:text-base">
+              GET A QUOTE ➜
+            </button>
           </div>
         </div>
 
-        {/* Buttons below phone */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <a
-            href="/learn-more"
-            className="bg-[#294A63] text-white px-6 py-2 shadow-md flex items-center gap-2 text-sm sm:text-base hover:bg-[#1f3a4d] transition"
-          >
-            LEARN MORE <HiArrowCircleRight className="w-5 h-5" />
-          </a>
-          <a
-            href="/get-a-quote"
-            className="bg-[#294A63] text-white px-6 py-2 shadow-md flex items-center gap-2 text-sm sm:text-base hover:bg-[#1f3a4d] transition"
-          >
-            GET A QUOTE <HiArrowCircleRight className="w-5 h-5" />
-          </a>
+        {/* Right Services */}
+        <div className="space-y-10 text-left flex flex-col justify-center">
+          {servicesRight.map((service, i) => (
+            <div key={i} className="p-2 sm:p-4">
+              <h3 className="text-base sm:text-lg md:text-2xl lg:text-2xl font-bold text-[#294A63] flex items-center justify-start gap-3">
+                <span className="border-[2.5px] rounded-full text-[#294A63] w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center transition-transform duration-300 hover:text-white zoom-hover">
+                  <HiCheck className="w-5 h-5 sm:w-6 sm:h-6" />
+                </span>
+                {service.title}
+              </h3>
+              <p className="mt-4 sm:mt-5 text-white text-sm sm:text-base max-w-[220px] sm:max-w-xs mr-auto">
+                {service.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default ServicesSection;
+}
