@@ -18,7 +18,7 @@ export default function Navbar() {
       <Topbar />
       <nav className="container mx-auto flex items-center justify-between py-3 px-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={nktechLogo} alt="NKTech" className="h-10 w-auto" />
+          <img src={nktechLogo} alt="Bizwoke" className="h-12 w-auto" />
         </Link>
 
           {/* Desktop Menu */}
