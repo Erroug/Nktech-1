@@ -55,10 +55,10 @@ export default function ServicesShowcase() {
               className="w-44 md:w-56 lg:w-64 border-4 border-white rounded-lg shadow-lg"
             />
             <div className="absolute bottom-[-80px] flex gap-6">
-              <button className="bg-blue-900 text-white px-7 py-4 rounded-md font-medium hover:bg-blue-800 transition text-base">
+              <button className="bg-[#294a63] text-white px-7 py-4 rounded-md font-medium hover:bg-blue-800 cursor-pointer transition text-base">
                 LEARN MORE ➜
               </button>
-              <button className="bg-blue-900 text-white px-7 py-4 rounded-md font-medium hover:bg-blue-800 transition text-base">
+              <button className="bg-[#294a63] text-white px-7 py-4 rounded-md font-medium hover:bg-blue-800 cursor-pointer transition text-base">
                 GET A QUOTE ➜
               </button>
             </div>

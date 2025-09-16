@@ -9,7 +9,7 @@ const iphoneImg = "/assets/iphone-toolbox.jpg";
 
 const Card = ({ title, description, imgSrc, center }) => (
   <div
-    className={`bg-[#1f3b4d] text-white rounded-md shadow-md overflow-hidden ${
+    className={`bg-[#294a63] text-white rounded-md shadow-md overflow-hidden ${
       center ? "flex flex-col items-center justify-center py-6 px-4" : ""
     }`}
   >
@@ -76,7 +76,7 @@ export default function AwardsGrid() {
 
   return (
     <div className="p-6 sm:p-8 bg-gray-100">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 text-[#1f3b4d]">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 text-[#294a63]">
         Awards And Achievements
       </h1>
 

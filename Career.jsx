@@ -2,7 +2,7 @@ import React from "react";
 
 const Career = () => {
   return (
-    <div className="bg-[#294A63] text-white px-6 md:px-16 lg:px-24 py-12 flex flex-col md:flex-row justify-between items-center rounded-md shadow-md gap-6 md:gap-0">
+    <div className="bg-[#294a63] text-white px-6 md:px-16 lg:px-24 py-12 flex flex-col md:flex-row justify-between items-center rounded-md shadow-md gap-6 md:gap-0">
       
       {/* Left Section: Text */}
       <div className="flex flex-col text-center md:text-left">

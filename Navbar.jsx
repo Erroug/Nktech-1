@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { menuItems } from "../data/menuItem.js";
 import MenuItems from "./MenuItems.jsx";
 import { ShoppingCart, Menu, X } from "lucide-react";
-const nktechLogo = "/assets/Bizwoke.jpg";
+const bizwokeLogo = "/assets/Bizwoke.jpg";
 import Topbar from "./Topbar.jsx";
 import { CartContext } from "../context/CartContext.jsx";
 
@@ -18,7 +18,7 @@ export default function Navbar() {
       <Topbar />
       <nav className="container mx-auto flex items-center justify-between py-3 px-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={nktechLogo} alt="Bizwoke" className="h-12 w-auto" />
+          <img src={bizwokeLogo} alt="Bizwoke" className="h-12 w-auto" />
         </Link>
 
           {/* Desktop Menu */}

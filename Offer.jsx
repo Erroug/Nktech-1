@@ -2,7 +2,7 @@ import React from "react";
 
 const Offer = () => {
   return (
-    <div className="bg-[#294A63] text-white px-6 md:px-12 lg:px-20 py-10 md:py-16 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10 rounded-md shadow-md">
+    <div className="bg-[#294a63] text-white px-6 md:px-12 lg:px-20 py-10 md:py-16 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-10 rounded-md shadow-md">
       
       {/* Left Section: Text */}
       <div className="flex flex-col text-center md:text-left">

@@ -12,7 +12,7 @@ const PopularSearches = () => {
     <section className="w-full flex flex-col items-center py-8 bg-white px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="w-full max-w-4xl bg-gray-200 px-6 py-3 rounded-md shadow-sm">
-        <h2 className="text-lg md:text-xl font-semibold text-gray-800">
+        <h2 className="text-lg md:text-xl font-bold text-[#294a63]">
           Popular Searches
         </h2>
       </div>
