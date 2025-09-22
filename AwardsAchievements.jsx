@@ -35,7 +35,7 @@ const Card = ({ title, description, imgSrc, center }) => (
       <h2 className="text-lg sm:text-xl font-bold uppercase tracking-wide">
         {title}
       </h2>
-      <p className="mt-2 text-sm sm:text-base leading-relaxed">{description}</p>
+      <p className="mt-2 text-sm sm:text-base text-justify leading-relaxed">{description}</p>
     </div>
   </div>
 );
