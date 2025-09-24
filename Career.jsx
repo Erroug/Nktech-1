@@ -15,9 +15,11 @@ const Career = () => {
       </div>
 
       {/* Right Section: Button */}
-      <button className="border-2 border-white text-white font-bold px-8 sm:px-12 md:px-20 lg:px-28 py-2 rounded hover:bg-gray-100 hover:text-[#294A63] transition whitespace-nowrap">
+      <a href="#">
+      <button className="border-2 border-white text-white font-bold px-8 sm:px-12 md:px-20 lg:px-28 py-2 rounded hover:bg-gray-100 hover:text-[#294A63] hover:cursor-pointer transition whitespace-nowrap">
         Click Here
       </button>
+      </a>
     </div>
   );
 };

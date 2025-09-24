@@ -22,7 +22,7 @@ export default function MenuItems({ item, depthLevel }) {
       <Link
         to={item.to || "#"}
         className={`flex items-center justify-between gap-1 px-4 py-2 ${fontSizeClass} block whitespace-nowrap transition 
-          ${depthLevel === 0 ? "font-medium" : ""}
+          ${depthLevel === 0 ? "font-semibold" : ""}
           ${
             isActive || isOpen
               ? "text-yellow-400 font-semibold animate-pulse"

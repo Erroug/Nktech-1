@@ -21,7 +21,7 @@ export default function ClientsMarquee() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-center  justify-betwee mb-6">
           <div>
-            <h2 className="text-4xl font-bold text-gray-800 text-center w-full">Our Clients</h2>
+            <h2 className="text-4xl font-bold text-[#294A63] text-center w-full">Our Clients</h2>
           </div>
         </div>
 

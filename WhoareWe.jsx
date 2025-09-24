@@ -7,7 +7,7 @@ const WhoAreWe = () => {
         <h2 className="text-3xl md:text-6xl font-bold text-[#294A63] mb-6 relative inline-block">
           <span className="border-b-4 border-orange-500 pb-1">Who are we?</span>
         </h2>
-        <p className="text-[#7a7a7a] text-lg leading-7 text-justify mt-6">
+        <p className="text-gray-600 text-xl leading-7 text-justify mt-6">
         Since 2012, Bizwoke has been rated as the, <span className="font-semibold text-black-600">Best SEO company in Noida and Delhi NCR</span>,
         also known as <span className="text-red-500 underline">Best SEO company in Noida </span> and <span className="text-red-500"> Delhi NCR</span> by our esteemed clients. Bizwoke is the only agency that offers
         guaranteed SEO services with white hat SEO strategies. We began our journey as a Website Development

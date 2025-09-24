@@ -16,9 +16,11 @@ const Offer = () => {
       </div>
 
       {/* Right Section: Button */}
-      <button className="border-2 border-white text-white font-bold px-8 sm:px-16 lg:px-28 py-2 rounded hover:bg-gray-100 hover:text-[#294A63] transition whitespace-nowrap">
+      <a href="#">
+      <button className="border-2 border-white text-white font-bold px-8 sm:px-16 lg:px-28 py-2 rounded hover:bg-gray-100 hover:text-[#294A63] hover:cursor-pointer transition whitespace-nowrap">
         Get Offer
       </button>
+      </a>
     </div>
   );
 };

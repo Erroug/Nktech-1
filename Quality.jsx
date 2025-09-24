@@ -14,7 +14,7 @@ const Quality = () => {
           <h2 className="text-2xl text-[#294A63] font-semibold mb-2">
             13 YEARS OF EXPERTISE
           </h2>
-          <p className="text-base text-justify text-[#7a7a7a]">
+          <p className="text-base text-justify text-gray-600">
             We have been in Digital Marketing for 12+ years, helping you compete on the internet and converting your visitors into your clients.
           </p>
         </div>
@@ -29,7 +29,7 @@ const Quality = () => {
           <h2 className="text-2xl text-[#294A63] font-semibold mb-2">
             500 CLIENTS
           </h2>
-          <p className="text-base text-justify text-[#7a7a7a]">
+          <p className="text-base text-justify text-gray-600">
             We strive to ensure that our customers are satisfied and we work continuously to develop your projects and surpass your expectations.
           </p>
         </div>
@@ -44,7 +44,7 @@ const Quality = () => {
           <h2 className="text-2xl text-[#294A63] font-semibold mb-2">
             Guaranteed SEO results
           </h2>
-          <p className="text-base text-justify text-[#7a7a7a]">
+          <p className="text-base text-justify text-gray-600">
             Our unique guarantee plans offer 100% SEO ranking or Free.
           </p>
         </div>

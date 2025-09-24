@@ -10,7 +10,7 @@ const ConsultationSection = () => {
     >
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 text-center text-white">
-        <h2 className="text-3xl font-bold mb-2">Career With Us</h2>
+        <h2 className="text-4xl font-bold mb-2">Career With Us</h2>
         <p className="mb-4">Join the Best SEO Team.</p>
         <a
           href="#"

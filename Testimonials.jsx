@@ -13,7 +13,7 @@ const Testimonials = () => {
       designation: "MD Jukaso Hotels Pvt. Ltd.",
       text: "This is an amazing service!",
       fullText:
-        "This is a Jukaso Journeys reviews, if you are looking for the best SEO company in Noida then NKtech is the best choice. I am thankful to the Team NKtech for providing result-oriented SEO services for my business. My overall experience with them was amazing. They have a good team of digital marketing experts. They are the fastest growing SEO Company in Noida. Keep it Up.",
+        "This is a Jukaso Journeys reviews, if you are looking for the best SEO company in Noida then Bizwoke is the best choice. I am thankful to the Team Bizwoke for providing result-oriented SEO services for my business. My overall experience with them was amazing. They have a good team of digital marketing experts. They are the fastest growing SEO Company in Noida. Keep it Up.",
       rating: 5,
       image:
         RajivKhanna
@@ -24,7 +24,7 @@ const Testimonials = () => {
       designation: "CEO, Jukaso Journeys",
       text: "Highly recommend to everyone.",
       fullText:
-        "I am very much pleased with the services of Nktech. They are providing the best SEO services in Noida. Initially, our website performance was not good but when we gave our work to them and now our website is performing well. I found, traffic is increased and rank has improved. Great work was done by the team",
+        "I am very much pleased with the services of Bizwoke. They are providing the best SEO services in Noida. Initially, our website performance was not good but when we gave our work to them and now our website is performing well. I found, traffic is increased and rank has improved. Great work was done by the team",
       rating: 4,
       image:yajushkhanna
     },
@@ -34,7 +34,7 @@ const Testimonials = () => {
       designation: "Client",
       text: "Great value for money.",
       fullText:
-        "The experience was very nice with NKTech. Mr. Rajeev Sharma is the best person I have ever meet. he helped & guide me to grow my business online with the company. Must say genuine Company. Looking for Best SEO company in Noida ? NKTech is will be the best choice.",
+        "The experience was very nice with Bizwoke. Mr. Rajeev Sharma is the best person I have ever meet. he helped & guide me to grow my business online with the company. Must say genuine Company. Looking for Best SEO company in Noida ? Bizwoke is will be the best choice.",
       rating: 5,
       image:
         noprofile

@@ -54,14 +54,20 @@ export default function ServicesShowcase() {
               alt="ToolsBox"
               className="w-44 md:w-56 lg:w-64 border-4 border-white rounded-lg shadow-lg"
             />
-            <div className="absolute bottom-[-80px] flex gap-6">
-              <button className="bg-[#294a63] text-white px-7 py-4 rounded-md font-medium hover:bg-blue-800 cursor-pointer transition text-base">
-                LEARN MORE ➜
-              </button>
-              <button className="bg-[#294a63] text-white px-7 py-4 rounded-md font-medium hover:bg-blue-800 cursor-pointer transition text-base">
-                GET A QUOTE ➜
-              </button>
+            <div className="absolute bottom-[-80px] flex gap-4 justify-center items-center w-full px-2">
+              <a href="/learn-more">
+                <button className="bg-[#294a63] text-white px-5 sm:px-7 py-3 rounded-md font-medium hover:bg-blue-800 cursor-pointer transition text-sm sm:text-base whitespace-nowrap flex-shrink">
+                  LEARN MORE ➜
+                </button>
+              </a>
+
+              <a href="/get-quote">
+                <button className="bg-[#294a63] text-white px-5 sm:px-7 py-3 rounded-md font-medium hover:bg-blue-800 cursor-pointer transition text-sm sm:text-base whitespace-nowrap flex-shrink">
+                  GET A QUOTE ➜
+                </button>
+              </a>
             </div>
+
           </div>
 
           {/* Right Services */}

@@ -38,7 +38,7 @@ const HeroSection = () => {
       style={{ backgroundImage: `url(${slides[current].image})` }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/20 sm:bg-black/10"></div>
+      <div className="absolute inset-0 bg-black/20 sm:bg-black/20"></div>
 
       {/* Text Content */}
       <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
@@ -51,12 +51,18 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <button className="w-full sm:w-auto text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm md:text-base px-6 py-3 shadow-md">
+
+          <a href="#">
+          <button className="w-full sm:w-auto text-white bg-red-700 hover:bg-blue-700 hover:cursor-pointer font-medium rounded-lg text-sm md:text-base px-6 py-3 shadow-md">
             WATCH VIDEOS
           </button>
-          <button className="w-full sm:w-auto text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm md:text-base px-6 py-3 shadow-md">
+          </a>
+
+          <a href="#">
+          <button className="w-full sm:w-auto text-white bg-red-700 hover:bg-blue-700 hover:cursor-pointer font-medium rounded-lg text-sm md:text-base px-6 py-3 shadow-md">
             LEARN MORE
           </button>
+          </a>
         </div>
       </div>
 
